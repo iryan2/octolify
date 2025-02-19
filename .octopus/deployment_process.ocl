@@ -20,10 +20,8 @@ step "run-a-script" {
                 git clone https://github.com/iryan2/octolify.git
                 cd octolify
                 npm install
-                pwd
-                cat package.json
                 
-                npm build
+                npm run build
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
