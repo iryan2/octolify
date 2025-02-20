@@ -1,0 +1,7 @@
+variable "Netlify API Token" {
+    value "nfp_voQ4MRm3Adg444TUTBh6KJbfvWc8fj7a7810" {}
+}
+
+variable "Site Name" {
+    value "octolify" {}
+}
