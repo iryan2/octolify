@@ -27,6 +27,8 @@ step "run-a-script" {
                 
                 npm i -g zip
                 
+                which tar
+                
                 which zip 
                 
                 zip -r dist.zip dist
