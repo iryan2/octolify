@@ -22,6 +22,17 @@ step "run-a-script" {
                 npm install
                 
                 npm run build
+                
+                which zip 
+                
+                zip -r dist.zip dist
+                
+                ls -al
+                
+                curl -s -H "Content-Type: application/zip" \
+                     -H "Authorization: Bearer $(get_octopusvariable "Netlify API Token")" \
+                     --data-binary dist.zip \
+                     https://api.netlify.com/api/v1/sites/$(get_octopusvariable "Site Name").netlify.app/deploys
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
