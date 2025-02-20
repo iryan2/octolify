@@ -23,7 +23,9 @@ step "run-a-script" {
                 
                 npm run build
                 
-                apt-get install zip
+                # sudo apt-get install zip
+                
+                npm i -g zip
                 
                 which zip 
                 
